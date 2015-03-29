@@ -1,9 +1,7 @@
-package MooseX::Storage;
-# git description: v0.47-5-ge424fc2
-$MooseX::Storage::VERSION = '0.48';
+package MooseX::Storage; # git description: v0.48-17-g27a5788
 # ABSTRACT: A serialization framework for Moose classes
 # KEYWORDS: moose extension serial serialization class object store storage types strings
-
+our $VERSION = '0.49';
 use Moose 0.99;
 use MooseX::Storage::Meta::Attribute::DoNotSerialize;
 use String::RewritePrefix ();
@@ -119,7 +117,7 @@ MooseX::Storage - A serialization framework for Moose classes
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 
@@ -399,7 +397,7 @@ the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge Tomas Doran Ricardo Signes Chris Prather Yuval Kogman Jos Boumans Shawn M Moore Jonathan Yu Robert Boone Dagfinn Ilmari Mannsåker Cory Watson Dan Brook David Steinbrunner Jason Pope Johannes Plunien Rockway Florian Ragwitz Golden
+=for stopwords Karen Etheridge Tomas Doran Ricardo Signes Chris Prather Jos Boumans Shawn M Moore Jonathan Yu Dagfinn Ilmari Mannsåker Dmitry Latin Cory Watson Robert Boone sillitoe Dan Brook David Golden Steinbrunner Florian Ragwitz Jason Pope Johannes Plunien Rockway
 
 =over 4
 
@@ -421,10 +419,6 @@ Chris Prather <chris@prather.org>
 
 =item *
 
-Yuval Kogman <nothingmuch@woobling.org>
-
-=item *
-
 Jos Boumans <jos@dwim.org>
 
 =item *
@@ -437,11 +431,11 @@ Jonathan Yu <frequency@cpan.org>
 
 =item *
 
-Robert Boone <robo4288@gmail.com>
+Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
 
 =item *
 
-Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
+Dmitry Latin <dim0xff@gmail.com>
 
 =item *
 
@@ -449,11 +443,27 @@ Cory Watson <gphat@Crankwizzah.local>
 
 =item *
 
+Robert Boone <robo4288@gmail.com>
+
+=item *
+
+sillitoe <ian@sillit.com>
+
+=item *
+
 Dan Brook <dan@broquaint.com>
 
 =item *
 
+David Golden <dagolden@cpan.org>
+
+=item *
+
 David Steinbrunner <dsteinbrunner@pobox.com>
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
 
 =item *
 
@@ -466,14 +476,6 @@ Johannes Plunien <plu@pqpq.de>
 =item *
 
 Jonathan Rockway <jon@jrock.us>
-
-=item *
-
-Florian Ragwitz <rafl@debian.org>
-
-=item *
-
-David Golden <dagolden@cpan.org>
 
 =back
 

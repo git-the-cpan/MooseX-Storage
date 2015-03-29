@@ -1,6 +1,6 @@
 package MooseX::Storage::Base::WithChecksum;
 # ABSTRACT: A more secure serialization role
-$MooseX::Storage::Base::WithChecksum::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
 with 'MooseX::Storage::Basic';
 
@@ -105,7 +105,7 @@ MooseX::Storage::Base::WithChecksum - A more secure serialization role
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 DESCRIPTION
 

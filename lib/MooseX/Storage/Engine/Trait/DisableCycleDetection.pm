@@ -1,6 +1,6 @@
 package MooseX::Storage::Engine::Trait::DisableCycleDetection;
 # ABSTRACT: A custom trait to bypass cycle detection
-$MooseX::Storage::Engine::Trait::DisableCycleDetection::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
 use namespace::autoclean;
 
@@ -24,7 +24,7 @@ MooseX::Storage::Engine::Trait::DisableCycleDetection - A custom trait to bypass
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 

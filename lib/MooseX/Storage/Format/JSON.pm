@@ -1,8 +1,8 @@
 package MooseX::Storage::Format::JSON;
 # ABSTRACT: A JSON serialization role
-$MooseX::Storage::Format::JSON::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
-use JSON::MaybeXS;
+use JSON::MaybeXS 1.001000;
 use namespace::autoclean;
 
 requires 'pack';
@@ -45,7 +45,7 @@ MooseX::Storage::Format::JSON - A JSON serialization role
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 

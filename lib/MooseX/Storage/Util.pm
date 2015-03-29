@@ -1,10 +1,11 @@
 package MooseX::Storage::Util;
 # ABSTRACT: A MooseX::Storage Swiss Army chainsaw
-$MooseX::Storage::Util::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose;
 use MooseX::Storage::Engine ();
 use Scalar::Util 'blessed';
 use Carp 'confess';
+use JSON::MaybeXS 1.001000;
 use namespace::autoclean;
 
 sub peek {
@@ -76,7 +77,7 @@ MooseX::Storage::Util - A MooseX::Storage Swiss Army chainsaw
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 DESCRIPTION
 

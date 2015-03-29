@@ -2,11 +2,11 @@ use 5.006;
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.048
+# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.052
 
 use Test::More 0.94;
 
-plan tests => 12 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+plan tests => 21;
 
 my @module_files = (
     'MooseX/Storage.pm',
@@ -14,8 +14,16 @@ my @module_files = (
     'MooseX/Storage/Basic.pm',
     'MooseX/Storage/Deferred.pm',
     'MooseX/Storage/Engine.pm',
+    'MooseX/Storage/Engine/IO/AtomicFile.pm',
+    'MooseX/Storage/Engine/IO/File.pm',
     'MooseX/Storage/Engine/Trait/DisableCycleDetection.pm',
     'MooseX/Storage/Engine/Trait/OnlyWhenBuilt.pm',
+    'MooseX/Storage/Format/JSON.pm',
+    'MooseX/Storage/Format/Storable.pm',
+    'MooseX/Storage/Format/YAML.pm',
+    'MooseX/Storage/IO/AtomicFile.pm',
+    'MooseX/Storage/IO/File.pm',
+    'MooseX/Storage/IO/StorableFile.pm',
     'MooseX/Storage/Meta/Attribute/DoNotSerialize.pm',
     'MooseX/Storage/Meta/Attribute/Trait/DoNotSerialize.pm',
     'MooseX/Storage/Traits/DisableCycleDetection.pm',
@@ -57,6 +65,6 @@ for my $lib (@module_files)
 
 
 is(scalar(@warnings), 0, 'no warnings found')
-    or diag 'got warnings: ', explain(\@warnings) if $ENV{AUTHOR_TESTING};
+    or diag 'got warnings: ', explain(\@warnings);
 
 BAIL_OUT("Compilation problems") if !Test::More->builder->is_passing;

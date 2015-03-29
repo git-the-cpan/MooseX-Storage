@@ -1,6 +1,6 @@
 package MooseX::Storage::IO::AtomicFile;
 # ABSTRACT: An Atomic File I/O role
-$MooseX::Storage::IO::AtomicFile::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
 use MooseX::Storage::Engine::IO::AtomicFile;
 use namespace::autoclean;
@@ -28,7 +28,7 @@ MooseX::Storage::IO::AtomicFile - An Atomic File I/O role
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 

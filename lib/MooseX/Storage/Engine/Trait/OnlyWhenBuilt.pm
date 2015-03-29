@@ -1,6 +1,6 @@
 package MooseX::Storage::Engine::Trait::OnlyWhenBuilt;
 # ABSTRACT: An engine trait to bypass serialization
-$MooseX::Storage::Engine::Trait::OnlyWhenBuilt::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
 use namespace::autoclean;
 
@@ -33,7 +33,7 @@ MooseX::Storage::Engine::Trait::OnlyWhenBuilt - An engine trait to bypass serial
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 

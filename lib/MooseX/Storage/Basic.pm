@@ -1,6 +1,6 @@
 package MooseX::Storage::Basic;
 # ABSTRACT: The simplest level of serialization
-$MooseX::Storage::Basic::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose::Role;
 use MooseX::Storage::Engine;
 use String::RewritePrefix;
@@ -70,7 +70,7 @@ MooseX::Storage::Basic - The simplest level of serialization
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 SYNOPSIS
 

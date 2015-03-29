@@ -1,10 +1,10 @@
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.13
+# this test was generated with Dist::Zilla::Plugin::Test::EOL 0.17
 
 use Test::More 0.88;
-use Test::NoTabs;
+use Test::EOL;
 
 my @files = (
     'lib/MooseX/Storage.pm',
@@ -60,23 +60,8 @@ my @files = (
     't/105_io_atomic_w_utf8.t',
     't/200_combined_in_roles.t',
     't/300_overloaded.t',
-    't/zzz-check-breaks.t',
-    'xt/author/00-compile.t',
-    'xt/author/clean-namespaces.t',
-    'xt/author/eol.t',
-    'xt/author/no-tabs.t',
-    'xt/author/pod-spell.t',
-    'xt/release/changes_has_content.t',
-    'xt/release/cpan-changes.t',
-    'xt/release/distmeta.t',
-    'xt/release/kwalitee.t',
-    'xt/release/minimum-version.t',
-    'xt/release/mojibake.t',
-    'xt/release/pod-coverage.t',
-    'xt/release/pod-no404s.t',
-    'xt/release/pod-syntax.t',
-    'xt/release/portability.t'
+    't/zzz-check-breaks.t'
 );
 
-notabs_ok($_) foreach @files;
+eol_unix_ok($_, { trailing_whitespace => 1 }) foreach @files;
 done_testing;

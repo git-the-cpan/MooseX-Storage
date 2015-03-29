@@ -1,6 +1,6 @@
 package MooseX::Storage::Engine::IO::File;
 # ABSTRACT: The actual file storage mechanism.
-$MooseX::Storage::Engine::IO::File::VERSION = '0.48';
+our $VERSION = '0.49';
 use Moose;
 use IO::File;
 use Carp 'confess';
@@ -43,7 +43,7 @@ MooseX::Storage::Engine::IO::File - The actual file storage mechanism.
 
 =head1 VERSION
 
-version 0.48
+version 0.49
 
 =head1 DESCRIPTION
 
