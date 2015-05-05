@@ -1,12 +1,15 @@
 package MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize;
 # ABSTRACT: A custom meta-attribute-trait to bypass serialization
-our $VERSION = '0.49';
+
+our $VERSION = '0.50';
+
 use Moose::Role;
 use namespace::autoclean;
 
 # register this alias ...
-package Moose::Meta::Attribute::Custom::Trait::DoNotSerialize;
-our $VERSION = '0.49';
+package # hide from PAUSE
+    Moose::Meta::Attribute::Custom::Trait::DoNotSerialize;
+
 sub register_implementation { 'MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize' }
 
 1;
@@ -23,7 +26,7 @@ MooseX::Storage::Meta::Attribute::Trait::DoNotSerialize - A custom meta-attribut
 
 =head1 VERSION
 
-version 0.49
+version 0.50
 
 =head1 SYNOPSIS
 

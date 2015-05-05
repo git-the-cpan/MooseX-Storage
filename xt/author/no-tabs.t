@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.13
+# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.14
 
 use Test::More 0.88;
 use Test::NoTabs;
@@ -52,6 +52,7 @@ my @files = (
     't/060_basic_deferred.t',
     't/061_basic_deferred_w_io.t',
     't/070_basic_maybe.t',
+    't/080_basic_json_boolean.t',
     't/100_io.t',
     't/101_io_atomic.t',
     't/102_io_storable_file.t',

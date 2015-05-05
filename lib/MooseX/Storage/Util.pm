@@ -1,6 +1,8 @@
 package MooseX::Storage::Util;
 # ABSTRACT: A MooseX::Storage Swiss Army chainsaw
-our $VERSION = '0.49';
+
+our $VERSION = '0.50';
+
 use Moose;
 use MooseX::Storage::Engine ();
 use Scalar::Util 'blessed';
@@ -77,7 +79,7 @@ MooseX::Storage::Util - A MooseX::Storage Swiss Army chainsaw
 
 =head1 VERSION
 
-version 0.49
+version 0.50
 
 =head1 DESCRIPTION
 
@@ -139,8 +141,8 @@ Add more stuff to this module :)
 =head1 BUGS
 
 All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+exception. If you find a bug please or add the bug to cpan-RT
+at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
 
 =head1 AUTHORS
 

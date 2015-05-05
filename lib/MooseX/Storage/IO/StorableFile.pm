@@ -1,6 +1,8 @@
 package MooseX::Storage::IO::StorableFile;
 # ABSTRACT: An Storable File I/O role
-our $VERSION = '0.49';
+
+our $VERSION = '0.50';
+
 use Moose::Role;
 use Storable ();
 use namespace::autoclean;
@@ -42,7 +44,7 @@ MooseX::Storage::IO::StorableFile - An Storable File I/O role
 
 =head1 VERSION
 
-version 0.49
+version 0.50
 
 =head1 SYNOPSIS
 
@@ -103,8 +105,8 @@ all sorts of hairy issues. But you have been warned.
 =head1 BUGS
 
 All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+exception. If you find a bug please or add the bug to cpan-RT
+at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
 
 =head1 AUTHORS
 

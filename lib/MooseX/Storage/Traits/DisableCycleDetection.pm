@@ -1,6 +1,8 @@
 package MooseX::Storage::Traits::DisableCycleDetection;
 # ABSTRACT: A custom trait to bypass cycle detection
-our $VERSION = '0.49';
+
+our $VERSION = '0.50';
+
 use Moose::Role;
 use namespace::autoclean;
 
@@ -37,7 +39,7 @@ MooseX::Storage::Traits::DisableCycleDetection - A custom trait to bypass cycle 
 
 =head1 VERSION
 
-version 0.49
+version 0.50
 
 =head1 SYNOPSIS
 
@@ -82,8 +84,8 @@ See the SYNOPSIS for a nice example that can be easily cargo-culted.
 =head1 BUGS
 
 All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+exception. If you find a bug please or add the bug to cpan-RT
+at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
 
 =head1 AUTHORS
 

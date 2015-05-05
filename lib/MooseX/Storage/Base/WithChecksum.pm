@@ -1,6 +1,8 @@
 package MooseX::Storage::Base::WithChecksum;
 # ABSTRACT: A more secure serialization role
-our $VERSION = '0.49';
+
+our $VERSION = '0.50';
+
 use Moose::Role;
 with 'MooseX::Storage::Basic';
 
@@ -105,7 +107,7 @@ MooseX::Storage::Base::WithChecksum - A more secure serialization role
 
 =head1 VERSION
 
-version 0.49
+version 0.50
 
 =head1 DESCRIPTION
 
@@ -137,8 +139,8 @@ are very welcome.
 =head1 BUGS
 
 All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+exception. If you find a bug please or add the bug to cpan-RT
+at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
 
 =head1 AUTHORS
 

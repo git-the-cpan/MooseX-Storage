@@ -7,7 +7,7 @@ do { my $x = {
                       },
        'develop' => {
                       'recommends' => {
-                                        'Dist::Zilla::PluginBundle::Author::ETHER' => '0.091'
+                                        'Dist::Zilla::PluginBundle::Author::ETHER' => '0.092'
                                       },
                       'requires' => {
                                       'Digest::HMAC_SHA1' => '0',
@@ -151,8 +151,10 @@ do { my $x = {
                                    'File::Spec' => '0',
                                    'File::Spec::Functions' => '0',
                                    'File::Temp' => '0',
+                                   'JSON::PP' => '0',
                                    'Moose::Util::TypeConstraints' => '0',
                                    'Test::Deep' => '0',
+                                   'Test::Deep::Type' => '0',
                                    'Test::Fatal' => '0',
                                    'Test::More' => '0.88',
                                    'Test::Requires' => '0',
