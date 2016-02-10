@@ -1,8 +1,8 @@
-package MooseX::Storage; # git description: v0.49-9-gee3daf7
+package MooseX::Storage; # git description: v0.50-12-g06bae4d
 # ABSTRACT: A serialization framework for Moose classes
 # KEYWORDS: moose extension serial serialization class object store storage types strings
 
-our $VERSION = '0.50';
+our $VERSION = '0.51'; # TRIAL
 
 use Moose 0.99;
 use MooseX::Storage::Meta::Attribute::DoNotSerialize;
@@ -119,7 +119,7 @@ MooseX::Storage - A serialization framework for Moose classes
 
 =head1 VERSION
 
-version 0.50
+version 0.51
 
 =head1 SYNOPSIS
 
@@ -366,11 +366,16 @@ For the time being, please read the tests and feel free to email me
 if you have any questions. This module can also be discussed on IRC
 in the #moose channel on irc.perl.org.
 
-=head1 BUGS
+=head1 SUPPORT
 
-All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please or add the bug to cpan-RT
-at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Storage>
+(or L<bug-MooseX-Storage@rt.cpan.org|mailto:bug-MooseX-Storage@rt.cpan.org>).
+
+There is also a mailing list available for users of this distribution, at
+L<http://lists.perl.org/list/moose.html>.
+
+There is also an irc channel available for users of this distribution, at
+L<C<#moose> on C<irc.perl.org>|irc://irc.perl.org/#moose>.
 
 =head1 AUTHORS
 
@@ -389,13 +394,6 @@ Stevan Little <stevan.little@iinteractive.com>
 יובל קוג'מן (Yuval Kogman) <nothingmuch@woobling.org>
 
 =back
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2007 by Infinity Interactive, Inc..
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
@@ -480,5 +478,12 @@ Johannes Plunien <plu@pqpq.de>
 Jonathan Rockway <jon@jrock.us>
 
 =back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2007 by Infinity Interactive, Inc.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

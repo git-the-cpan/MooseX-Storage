@@ -1,7 +1,7 @@
 package MooseX::Storage::Engine::IO::File;
 # ABSTRACT: The actual file storage mechanism.
 
-our $VERSION = '0.50';
+our $VERSION = '0.51'; # TRIAL
 
 use Moose;
 use IO::File;
@@ -45,7 +45,7 @@ MooseX::Storage::Engine::IO::File - The actual file storage mechanism.
 
 =head1 VERSION
 
-version 0.50
+version 0.51
 
 =head1 DESCRIPTION
 
@@ -63,19 +63,16 @@ This provides the actual means to store data to a file.
 
 =back
 
-=head2 Introspection
+=head1 SUPPORT
 
-=over 4
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Storage>
+(or L<bug-MooseX-Storage@rt.cpan.org|mailto:bug-MooseX-Storage@rt.cpan.org>).
 
-=item B<meta>
+There is also a mailing list available for users of this distribution, at
+L<http://lists.perl.org/list/moose.html>.
 
-=back
-
-=head1 BUGS
-
-All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please either email me, or add the bug
-to cpan-RT.
+There is also an irc channel available for users of this distribution, at
+L<C<#moose> on C<irc.perl.org>|irc://irc.perl.org/#moose>.
 
 =head1 AUTHORS
 
@@ -97,7 +94,7 @@ Stevan Little <stevan.little@iinteractive.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2007 by Infinity Interactive, Inc..
+This software is copyright (c) 2007 by Infinity Interactive, Inc.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

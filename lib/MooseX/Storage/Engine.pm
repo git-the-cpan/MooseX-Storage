@@ -1,7 +1,7 @@
 package MooseX::Storage::Engine;
 # ABSTRACT: The meta-engine to handle collapsing and expanding objects
 
-our $VERSION = '0.50';
+our $VERSION = '0.51'; # TRIAL
 
 use Moose;
 use Scalar::Util qw(refaddr blessed);
@@ -311,12 +311,20 @@ sub find_type_handler {
     # if its parent is not parameterized.
     # If both is true recurse this method
     # using ->type_parameter.
-    return $self->find_type_handler($type_constraint->type_parameter, $value)
-        if ($type_constraint->parent && $type_constraint->parent eq 'Maybe'
-          and not $type_constraint->parent->can('type_parameter'));
+    if (my $parent = $type_constraint->parent) {
+        return $self->find_type_handler($type_constraint->type_parameter, $value)
+            if $parent eq 'Maybe' and not $parent->can('type_parameter');
+
+        # also account for the additional level added by MooseX::Types's use of maybe_type
+        if ($parent->isa('Moose::Meta::TypeConstraint::Parameterized')) {
+            my $parameter = $parent->parameterized_from;
+            return $self->find_type_handler($parent->type_parameter, $value)
+                if $parameter eq 'Maybe' and not $parameter->can('type_parameter');
+        }
+    }
 
     # find_type_for is a method of a union type.  If we can call that method
-    # then we are dealign with a union and we need to ascertain which of
+    # then we are dealing with a union and we need to ascertain which of
     # the union's types we need to use for the value we are serializing.
     if($type_constraint->can('find_type_for')) {
         my $tc = $type_constraint->find_type_for($value);
@@ -384,7 +392,7 @@ MooseX::Storage::Engine - The meta-engine to handle collapsing and expanding obj
 
 =head1 VERSION
 
-version 0.50
+version 0.51
 
 =head1 DESCRIPTION
 
@@ -460,19 +468,16 @@ assumes a C<DateTime> type has been registered.
 
 =back
 
-=head2 Introspection
+=head1 SUPPORT
 
-=over 4
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Storage>
+(or L<bug-MooseX-Storage@rt.cpan.org|mailto:bug-MooseX-Storage@rt.cpan.org>).
 
-=item B<meta>
+There is also a mailing list available for users of this distribution, at
+L<http://lists.perl.org/list/moose.html>.
 
-=back
-
-=head1 BUGS
-
-All complex software has bugs lurking in it, and this module is no
-exception. If you find a bug please or add the bug to cpan-RT
-at L<https://rt.cpan.org/Dist/Display.html?Queue=MooseX-Storage>.
+There is also an irc channel available for users of this distribution, at
+L<C<#moose> on C<irc.perl.org>|irc://irc.perl.org/#moose>.
 
 =head1 AUTHORS
 
@@ -494,7 +499,7 @@ Stevan Little <stevan.little@iinteractive.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2007 by Infinity Interactive, Inc..
+This software is copyright (c) 2007 by Infinity Interactive, Inc.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
